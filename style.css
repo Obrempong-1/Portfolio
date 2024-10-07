@@ -27,8 +27,6 @@ nav {
   position: sticky;
   top: 0;
   z-index: 1000;
-  overflow-x: auto;  /* Enable horizontal scroll for overflow */
-  white-space: nowrap;
 }
 
 nav .container {
@@ -44,8 +42,6 @@ nav .logo {
 nav ul {
   display: flex;
   list-style: none;
-  overflow-x: auto;  /* Allow horizontal scroll */
-  white-space: nowrap;
 }
 
 nav ul li {
@@ -64,7 +60,7 @@ nav ul li a:hover {
 
 .menu-toggle {
   display: none;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: #fff;
   cursor: pointer;
 }
@@ -91,7 +87,7 @@ nav ul li a:hover {
   border-radius: 5px;
   cursor: pointer;
   transition: transform 0.3s ease;
-} 
+}
 
 .btn:focus {
   outline: none;
@@ -193,10 +189,7 @@ footer {
 
 /* Media Queries */
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
+  /* Hide the full menu links and show the hamburger icon */
   nav ul {
     display: none;
     flex-direction: column;
@@ -206,24 +199,44 @@ footer {
     right: 0;
     width: 200px;
     padding: 15px 0;
+    z-index: 999;
   }
 
   nav ul.show {
     display: flex;
   }
 
-  nav ul li {
-    margin: 10px 0;
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-toggle {
+    font-size: 2rem;
   }
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 769px) {
+  /* Always show the menu links in wider viewports */
   nav ul {
-    flex-wrap: nowrap; /* Prevent the items from wrapping */
-    overflow-x: scroll; /* Enable horizontal scrolling */
+    display: flex;
   }
 
-  nav ul li {
-    margin-left: 10px;
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* Landscape view for mobiles */
+@media (orientation: landscape) and (max-width: 1024px) {
+  nav ul {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-toggle {
+    font-size: 2rem;
   }
 }
