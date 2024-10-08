@@ -27,6 +27,7 @@ nav {
   position: sticky;
   top: 0;
   z-index: 1000;
+  overflow-x: hidden;
 }
 
 nav .container {
@@ -37,16 +38,26 @@ nav .container {
 
 nav .logo {
   font-size: 1.8rem;
+  white-space: nowrap;
 }
 
 nav ul {
   display: flex;
   list-style: none;
-  flex-wrap: wrap; /* Allows the menu items to wrap to the next line if the screen is too small */
+  overflow-x: auto; /* Allow horizontal scroll */
+  -webkit-overflow-scrolling: touch; /* Enables smooth scrolling */
+  scroll-behavior: smooth; /* Smooth scroll */
+  white-space: nowrap; /* Prevent line breaks */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+nav ul::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for WebKit browsers */
 }
 
 nav ul li {
   margin-left: 20px;
+  white-space: nowrap;
 }
 
 nav ul li a {
@@ -183,20 +194,11 @@ footer {
 
 /* Media Queries */
 @media (max-width: 768px) {
-  /* Force the navbar links to be visible and wrap them if the screen is too small */
   nav ul {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   nav ul li {
-    margin: 10px 0;
-  }
-}
-
-@media (min-width: 769px) {
-  nav ul {
-    flex-direction: row;
+    margin-left: 10px;
   }
 }
