@@ -45,7 +45,7 @@ const animateOnScroll = () => {
 window.addEventListener('scroll', animateOnScroll);
 animateOnScroll(); // Initial call
 
-// Step 4: Smooth scroll for anchor links
+//  Smooth scroll for anchor links
 const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
 
 smoothScrollLinks.forEach(link => {
