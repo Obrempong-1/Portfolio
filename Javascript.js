@@ -1,28 +1,25 @@
-// Toggle Hamburger Menu
-const hamburger = document.getElementById('hamburger-menu');
-const navLinks = document.getElementById('nav-links');
-
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('show');
+// Scroll to Top Button
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+scrollToTopBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-// Scroll-to-Top Button Functionality
-const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 200) {
-    scrollToTopBtn.style.display = 'block';
+// Show or hide the scroll to top button
+window.addEventListener("scroll", () => {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    scrollToTopBtn.style.display = "block";
   } else {
-    scrollToTopBtn.style.display = 'none';
+    scrollToTopBtn.style.display = "none";
   }
 });
 
-scrollToTopBtn.addEventListener('click', () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth',
-  });
+// Mobile Menu Toggle
+const mobileMenu = document.getElementById("mobile-menu");
+const navLinks = document.getElementById("nav-links");
+
+mobileMenu.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
 });
 
-// Update Footer Year Dynamically
-const yearElement = document.getElementById('year');
-yearElement.textContent = new Date().getFullYear();
+// Update the year in the footer
+document.getElementById("year").innerText = new Date().getFullYear();
