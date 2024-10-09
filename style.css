@@ -6,7 +6,7 @@
 }
 
 html {
-  scroll-behavior: smooth; /* Smooth scroll behavior */
+  scroll-behavior: smooth; 
 }
 
 body {
@@ -139,7 +139,7 @@ nav ul li a:hover {
 
 /* Projects Section */
 #projects {
-  padding: 60px 0; /* Increased padding for the projects section */
+  padding: 60px 0; 
   background-color: #f4f4f4;
 }
 
@@ -163,7 +163,7 @@ nav ul li a:hover {
 
 /* Contact Section */
 #contact {
-  padding: 60px 0; /* Increased padding for the contact section */
+  padding: 60px 0; 
   background-color: #fff;
 }
 
@@ -199,7 +199,7 @@ footer {
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  display: none; /* Hidden by default */
+  display: none; 
   cursor: pointer;
   transition: background 0.3s ease;
 }
@@ -211,22 +211,22 @@ footer {
 /* Media Queries */
 @media (max-width: 768px) {
   nav ul {
-    display: none; /* Hide regular menu on mobile */
+    display: none; 
   }
 
   .mobile-menu {
-    display: flex; /* Show hamburger menu */
+    display: flex; 
   }
 
   .nav-links.active {
-    display: flex; /* Show menu when active */
-    flex-direction: column; /* Stack items vertically */
-    position: absolute; /* Position them above other content */
-    top: 60px; /* Adjust based on your navbar height */
-    right: 0; /* Align to the right */
-    background: #333; /* Same background as the navbar */
-    width: 100%; /* Full width of the screen */
-    z-index: 100; /* Make sure it's on top */
+    display: flex; 
+    flex-direction: column; 
+    position: absolute; 
+    top: 60px; 
+    right: 0; 
+    background: #333; 
+    width: 100%; 
+    z-index: 100;
   }
 
   .nav-links.active li {
