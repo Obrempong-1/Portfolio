@@ -47,14 +47,14 @@ nav .logo {
 nav ul {
   display: flex;
   list-style: none;
-  overflow-x: auto; /* Allow horizontal scroll */
-  -webkit-overflow-scrolling: touch; /* Enables smooth scrolling */
-  white-space: nowrap; /* Prevent line breaks */
-  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  overflow-x: auto; 
+  -webkit-overflow-scrolling: touch; 
+  white-space: nowrap;
+  scrollbar-width: none; 
 }
 
 nav ul::-webkit-scrollbar {
-  display: none; /* Hide scrollbar for WebKit browsers */
+  display: none; 
 }
 
 nav ul li {
