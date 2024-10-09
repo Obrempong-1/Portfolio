@@ -228,6 +228,7 @@ footer {
     right: 0;
     background: #333;
     width: 100%;
+    z-index: 100;
   }
 
   .nav-links.active li {
