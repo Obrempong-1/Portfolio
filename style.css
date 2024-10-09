@@ -14,7 +14,7 @@ body {
   line-height: 1.6;
   background-color: #f8f9fa;
   color: #333;
-  overflow-x: hidden;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 .container {
@@ -31,7 +31,6 @@ nav {
   position: sticky;
   top: 0;
   z-index: 1000;
-  overflow-x: hidden;
 }
 
 nav .container {
@@ -46,37 +45,13 @@ nav .logo {
 }
 
 nav ul {
-  display: flex;
+  display: flex; /* Show the links normally */
   list-style: none;
-  overflow-x: auto; /* Allow horizontal scroll */
-  -webkit-overflow-scrolling: touch; /* Enables smooth scrolling */
-  scroll-behavior: smooth; /* Smooth scroll */
-  white-space: nowrap; /* Prevent line breaks */
-  scrollbar-width: none; /* Hide scrollbar for Firefox */
-}
-
-nav ul::-webkit-scrollbar {
-  display: none; /* Hide scrollbar for WebKit browsers */
-}
-
-nav ul li {
-  margin-left: 20px;
-  white-space: nowrap;
-}
-
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-  color: #3498db;
 }
 
 /* Hamburger Menu */
 .mobile-menu {
-  display: none;
+  display: none; /* Hide by default */
   flex-direction: column;
   cursor: pointer;
 }
